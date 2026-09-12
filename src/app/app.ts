@@ -7,5 +7,15 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('introAngular');
+  titulo:string ="Angel Valadez"
+  duplicanumero(num:number):number{
+    return num*2
+  }
+  pelicula={
+    titulo:"El padrino",
+    anio:1972,
+    genero:"Crimen/drama",
+    fechaLanzamiento: new Date(),
+    precio:345
+  }
 }
