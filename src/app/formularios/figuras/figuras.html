@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <form>
+                        <div class="form-group pt-4">
+                            <label for="num1">base</label>
+                            <input [(ngModel)]='base' name="base" type="text" class="form-control" id="base" placeholder="Ingrese la base de la figura">
+                        </div>
+                        <div class="form-group pt-4">
+                            <label for="altura">altura</label>
+                            <input [(ngModel)]='altura' name="altura" type="text" class="form-control" id="altura" placeholder="Ingrese la altura de la figura">
+                        </div>
+                        <br />
+                        <div class="form-check">
+                            <input [(ngModel)]="opcion" class="form-check-input" type="radio" name="operacion" id="triangulo" value="triangulo">
+                            <label class="form-check-label" for="triangulo">Triangulo</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input [(ngModel)]="opcion" class="form-check-input" type="radio" name="operacion" id="circulo" value="circulo">
+                            <label class="form-check-label" for="circulo">Circulo</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input [(ngModel)]="opcion" class="form-check-input" type="radio" name="operacion" id="rectangulo" value="rectangulo">
+                            <label class="form-check-label" for="rectangulo">Rectangulo</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input [(ngModel)]="opcion" class="form-check-input" type="radio" name="operacion" id="pentagono" value="pentagono">
+                            <label class="form-check-label" for="pentagono">Pentagono</label>
+                        </div>
+                        <button (click)="figura()" type="button" class="btn btn-primary">Calcular</button>
+                        
+                    </form>
+                </div>
+                <div class="col-6">
+                    <h3>Resultado: {{resultado}} </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
